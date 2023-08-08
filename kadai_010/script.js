@@ -76,6 +76,9 @@ $(function (){
   $('#agree').blur(function(){
     inputCheck();
   });
+  $('#prefecture').blur(function(){
+    inputCheck();
+  });
 
   // お問合せフォームのチェック
   function inputCheck(){
@@ -147,8 +150,8 @@ $(function (){
     if($('#prefecture').val() == ''){
       // エラーあり
       $('#prefecture').css('background-color', '#f79999');
-      error: true;
-      message += '都道府県を選択してください\n'
+      error = true;
+      message += '都道府県を選択してください\n';
     }else{
       // エラーなし
       $('#prefecture').css('background-color', '#fafafa');
